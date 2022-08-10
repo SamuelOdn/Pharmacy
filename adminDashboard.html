@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Phama6+ Admin Panel</title>
+  <link rel="icon" href="img/pharma6Whiteb.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style type="text/css">
+        body {
+      background-color: #fbfbfb;
+    }
+
+    @media (min-width: 991.98px) {
+      main {
+        padding-left: 240px;
+      }
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      padding: 58px 0 0; /* Height of navbar */
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+      width: 240px;
+      z-index: 600;
+    }
+
+    @media (max-width: 991.98px) {
+      .sidebar {
+        width: 100%;
+      }
+    }
+    .sidebar .active {
+      border-radius: 5px;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    }
+
+    .sidebar-sticky {
+      position: relative;
+      top: 0;
+      height: calc(100vh - 48px);
+      padding-top: 0.5rem;
+      overflow-x: hidden;
+      overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    }
+
+    .section2{
+      display: none;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 120px;
+    }
+
+  </style>
+  <script type="text/javascript">
+    
+    function modifier() {
+      document.querySelector(".section2").style.display="flex";
+
+    }
+
+    function supprimer(){
+       var msg="Message sur la ligne 1.nMessage sur la ligne 2.n...";
+       console.log(msg)
+       alert(msg);
+    }
+  </script>
+    <!--Main Navigation-->
+    <header>
+      <!-- Sidebar -->
+      <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+          <div class="list-group list-group-flush mx-6 mt-4">
+            <!-- Collapse 1 -->
+            <a
+              class="list-group-item list-group-item-action py-2 ripple"
+              aria-current="true"
+              data-mdb-toggle="collapse"
+              href="#collapseExample1"
+              aria-expanded="true"
+              aria-controls="collapseExample1">
+              <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Menu principal</span>
+            </a>
+            <!-- Collapsed content -->
+            <ul id="collapseExample1" class="collapse show list-group list-group-flush">
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"> <strong>Gestion Pharmaciens</strong></a>
+              </li>
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"><i class="fas fa-caret-right pe-2"></i>Ajouter</a>
+              </li>
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"><i class="fas fa-caret-right pe-2"></i>Modifier</a>
+              </li>
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"><i class="fas fa-caret-right pe-2"></i>Supprimer</a>
+              </li>
+            </ul>
+            <!-- Collapse 1 -->
+
+            <!-- Collapse 2 -->
+            <a
+              class="list-group-item list-group-item-action py-2 ripple"
+              aria-current="true"
+              data-mdb-toggle="collapse"
+              href="#collapseExample2"
+              aria-expanded="true"
+              aria-controls="collapseExample2">
+              <i class="fas fa-chart-area fa-fw me-3"></i><span>Menu secondaire</span>
+            </a>
+            <!-- Collapsed content -->
+            <ul id="collapseExample2" class="collapse list-group list-group-flush">
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"><strong>Gestion Utilisateurs</strong></a>
+              </li>
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"><i class="fas fa-caret-right pe-2"></i>Liste des comptes</a>
+              </li>
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"><i class="fas fa-caret-right pe-2"></i>Mots de passe</a>
+              </li>
+              <li class="list-group-item py-1">
+                <a href="" class="text-reset"><i class="fas fa-caret-right pe-2"></i>Supprimer</a>
+              </li>
+            </ul>
+            <!-- Collapse 2 -->
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+
+      <!-- Navbar -->
+      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand" href="#">
+            <h5> <img src="img/pharma6Whiteb.png" alt="logo" style="width: 25px;">
+              <span style="color: #7ed957; font-weight: bold;">Pharma6+</span>
+            </h5>
+          </a>
+
+          <!-- Right links -->
+          <ul class="navbar-nav ms-auto d-flex flex-row">
+            <!-- Notification dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">0</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Some news</a></li>
+                <li><a class="dropdown-item" href="#">Another news</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Icon dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link me-4 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <i class="flag flag-france m-0"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#"><i class="flag flag-france"></i>Français
+                    <i class="fa fa-check text-success ms-2"></i></a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><i class="flag flag-united-states"></i>Anglais</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Avatar -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                <img
+                  src="img/avatar.png"
+                  class="rounded-circle"
+                  height="22"
+                  alt="Avatar"
+                  loading="lazy" />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="connexion.html">Déconnexion</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <!--Main Navigation-->
+    <main style="margin-top: 58px;">
+      <div class="container pt-4">
+
+      <!--Section: Management des users -->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <strong>INFORMATIONS </strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+            <table class="table align-middle mb-0 bg-white">
+                  <thead class="bg-light">
+                    <tr>
+                      <th>Nom de la pharmacie</th>
+                      <th>Pharmacien</th>
+                      <th>N.Téléphone</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                              src="img/pharma6V.png"
+                              alt=""
+                              style="width: 45px; height: 45px"
+                              class="rounded-circle"/>
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1">Pharmacie Fass Paillote</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="fw-normal mb-1">Cheikh Aminou Bamba</td>
+                      <td>
+                        786367757
+                      </td>
+                      <td>
+                         <span class="badge badge-success rounded-pill d-inline">Active</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-info"  href="#" onclick="javascript:modifier()" role="button">
+                          <i class="far fa-edit fa-lg"></i>
+                        </a>
+                        <a class="btn btn-danger" href="#" onclick="javascript:supprimer()" role="button">
+                          <i class="far fa-trash-alt fa-lg"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                              src="img/pharma6Wh.png"
+                              class="rounded-circle"
+                              alt=""
+                              style="width: 45px; height: 45px"/>
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1">Pharmacie Guigon</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="fw-normal mb-1">Abdoul Kane</td>
+                     
+                      <td>
+                         785367757
+                       
+                      </td>
+                      <td>
+                         <span class="badge badge-success rounded-pill d-inline">Active</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-info"  href="#" onclick="javascript:myFunct()" role="button">
+                          <i class="far fa-edit fa-lg"></i>
+                        </a>
+                        <a class="btn btn-danger" href="#" onclick="javascript:myFunct()" role="button">
+                          <i class="far fa-trash-alt fa-lg"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                              src="img/pharma6Whiteb.png"
+                              class="rounded-circle"
+                              alt=""
+                              style="width: 45px; height: 45px"/>
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1">Pharmacie DJAMIL</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="fw-normal mb-1">Samuel ODUNLAMI</td>
+                      <td>
+                        785367757
+                      </td>
+                      <td>
+                        <span class="badge badge-danger rounded-pill d-inline">Fermée</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-info"  href="#" onclick="javascript:myFunct()" role="button">
+                          <i class="far fa-edit fa-lg"></i>
+                        </a>
+                        <a class="btn btn-danger" href="#" onclick="javascript:myFunct()" role="button">
+                          <i class="far fa-trash-alt fa-lg"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </section> 
+      </div>
+
+    <section class="section2 vh-100">
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+                  <h2 class="text-uppercase text-center mb-3">Modifier Informations</h2>
+
+                  <form>
+
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1cg">Nom de la pharmacie</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form3Example3cg" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example3cg">Nom Complet du gérant</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="number" id="form3Example4cg" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example4cg">Numéro de téléphone</label>
+                    </div>
+
+                    <!--div class="d-flex justify-content-center">
+                      <button type="button"
+                        class="btn btn-success btn-block text-body" onclick="del()">Modifier</button>
+                    </div 
+
+                            <div class="d-grid gap-4 col-6 mx-left">
+                              <a class="btn btn-success btn-block" role="button" href="" style="background-color: #7ed957;"> Annuler</a>
+                            </div> -->
+
+                        <div class="d-flex align-items-center justify-content-center">
+                          <a class="btn btn-warning mb-0 me-2" role="button" href=""> Annuler</a>
+                          <a role="button" class="btn btn-success" href="">Modifier</a>
+                        </div>
+
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </main>
+    <!--Main layout-->
+  <!-- MDB -->
+  <script type="text/javascript">
+  </script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/admin.js"></script>
+
+</body>
+
+</html>

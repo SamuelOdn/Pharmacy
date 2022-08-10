@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Page d'acceuil</title>
+    <!-- Pharma6+ icon -->
+    <link rel="icon" href="img/pharma6Whiteb.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,300&family=Montserrat+Alternates&family=Playfair+Display:ital,wght@0,600;1,400&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+  </head>
+  <body>
+    <style type="text/css">
+      .d-block{
+        height: 560px;
+      }
+      body{
+        font-family: Montserrat;
+      }
+      h6{
+        font-weight: bold;
+      }
+      h4{
+        text-decoration: underline;
+      }
+    </style>
+
+    <!-- Start your project here-->
+<!--Main Navigation-->
+<header>
+  <!-- Jumbotron -->
+  <div class="p-3 text-center bg-white border-bottom">
+    <div class="container">
+      <div class="row">
+        <!-- Left elements -->
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+          <a href="#!" class="ms-md-2">
+            <h5> <img src="img/pharma6Whiteb.png" alt="logo" style="width: 25px;"><span style="color: #7ed957; font-weight: bold;">Pharma6+</span></h5>
+          </a>
+        </div>
+        <!-- Left elements #21D192-->
+
+        <!-- Center elements -->
+        <div class="col-md-4">
+          <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
+            <input autocomplete="off" type="search" class="form-control rounded" placeholder="Rechercher" />
+            <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
+          </form>
+        </div>
+        <!-- Center elements -->
+
+        <!-- Right elements -->
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
+          <div class="d-flex">
+            <!-- Cart -->
+            <a class="text-reset me-3" href="#">
+              <span><i class="fas fa-shopping-cart fa-2x"></i></span>
+              <span class="badge rounded-pill badge-notification bg-danger">0</span>
+            </a>
+
+            <!-- User -->
+            <div class="dropdown">
+              <a class="text-reset dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+               <i class="fas fa-circle-user fa-2x ms-2"></i>
+
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="connexion.html">Mon compte</a></li>
+                <li><a class="dropdown-item" href="inscription.html">S'inscrire</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+    </div>
+  </div>
+
+  <!--Section: Design Block-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+      <!-- Toggle button -->
+      <button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: .15rem;">
+          <!-- Navbar dropdown -->
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+              aria-expanded="false">
+              Catégories de produits
+            </a>
+            <!-- Dropdown menu -->
+            <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown"
+              style="border-top-left-radius: 0; border-top-right-radius: 0;">
+              <div class="container">
+                <div class="row my-4">
+                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="list-group list-group-flush">
+                      <p class="mb-0 list-group-item text-uppercase font-weight-bold">MEDICAMENTS</p>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Antibiotique</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Anti-inflammatoire</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Anti-douleur</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Anti-grippe</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="list-group list-group-flush">
+                      <p class="mb-0 list-group-item text-uppercase font-weight-bold">SANTE</p>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Aromathérapie</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Complément Alimentaire</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Forme, vitamines et Minéraux</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Appareils de mesure</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                    <div class="list-group list-group-flush">
+                      <p class="mb-0 list-group-item text-uppercase font-weight-bold">BEAUTE</p>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Maquillage</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Crème Hydratante</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Gommage</a>
+                      <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"></i>Masques</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="list-group list-group-flush">
+                      <p class="mb-0 list-group-item text-uppercase font-weight-bold">CHEVEUX</p>
+                      <a href="" class="list-group-item list-group-item-action">Shampoings</a>
+                      <a href="" class="list-group-item list-group-item-action">Produits de Coiffage</a>
+                      <a href="" class="list-group-item list-group-item-action">Soins pour Cheveux</a>
+                      <a href="" class="list-group-item list-group-item-action">Accessoires pour Cheveux</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- Left links -->
+      <button class="btn btn-outline-success" data-mdb-ripple-color="dark" type="button">
+        Pharmacie de garde ici <i class="fas fa-arrow-circle-down ms-2" ></i>
+      </button>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!--Section: Design Block-->
+
+  <!-- Navbar -->
+
+<div id="carouselExampleTouch" class="carousel slide" data-mdb-touch="false">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-mdb-target="#carouselExampleTouch"
+      data-mdb-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselExampleTouch"
+      data-mdb-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselExampleTouch"
+      data-mdb-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/welcome.png" class="d-block w-100" alt="photo d'accueil"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5></h5>
+        <p><strong></strong></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/pharmacy.jpg" class="d-block w-100" alt="image de pharmacien"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Recommandation</h5>
+        <p><strong>Nos pharmaciens sont vos meilleurs conseillers !</strong></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/pharmacienne1.jpg" class="d-block w-100" alt="une pharmacienne"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Découverte</h5>
+        <p><strong>Découvrez tous nos produits !</strong></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleTouch" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleTouch" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</header>
+<!--Main Navigation-->
+
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-light">
+    <h3 class="mb-0 h3" href="#medocs"><strong>Médicaments</strong> <i fas class="fas fa-tablets fa-2x"></i></h3>
+  </div>
+  <!-- Jumbotron -->
+
+<!-- start session -->
+  <section style="background-color: #eee;">
+  <div class="text-center container py-5">
+    <h4 class="mt-4 mb-5"><strong>MEILLEURS VENTES DU MOIS</strong> <i class="fas fa-chart-line"></i></strong></h4>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light">
+            <img src="img/daflon.png" class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-md-end align-items-top h-100">
+                  <h5><span class="badge bg-success ms-2">En stock</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title mb-3">Daflon 500mg</h5>
+              <p>Comprimé</p>
+            <h6 class="mb-3">5500.95 FCFA</h6>
+            <a href="#" class="btn btn-success">Commander</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light">
+            <img src=" img/Doxylamine.png"class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-md-end align-items-top h-100">
+                  <h5><span class="badge bg-success ms-2">En stock</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title mb-3">Donormyl Doxylamine 15mg</h5>
+              <p>Comprimé</p>
+            <h6 class="mb-3">5500.95 FCFA</h6>
+            <a href="#" class="btn btn-success">Commander</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img src="img/paracétamol.png " class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-md-end align-items-top h-100">
+                  <h5><span class="badge bg-success ms-2">En stock</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title mb-3">Paracétamol 500mg</h5>
+              <p>Comprimé</p>
+            <h6 class="mb-3">
+              <s>2500.95 FCFA</s><strong class="ms-2 text-danger">1500 FCFA</strong>
+            </h6>
+            <a href="#" class="btn btn-success">Commander</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img src="img/amoxicilline.jpg"class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-md-end align-items-top h-100">
+                  <h5>
+                    <span class="badge bg-success ms-2">En stock</span>
+                    <!--<span class="badge bg-danger ms-2">-10%</span> -->
+                  </h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title mb-3">Amoxicilline Sandoz 500mg</h5>
+              <p>Comprimé</p>
+            <h6 class="mb-3">
+              <s>2000 FCFA</s><strong class="ms-2 text-danger">3000 FCFA</strong>
+            </h6>
+            <a href="#" class="btn btn-success">Commander</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light">
+            <img src="img/aspirine.png" class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-md-end align-items-top h-100">
+                  <h5><span class="badge bg-danger ms-2">En rupture</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title mb-3">Aspirine Protect 100 mg </h5>
+              <p>Comprimé</p>
+
+            <h6 class="mb-3">2000 FCFA</h6>
+            <a href="#" class="btn btn-success">Commander</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img src="img/cipro1.jpeg" class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-md-end align-items-top h-100">
+                  <h5>
+                    <!--span class="badge bg-primary ms-2">New</span --><span class="badge bg-success ms-2">En stock </span>
+                      <!--span class="badge bg-danger ms-2">-10%</span-->
+                  </h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title mb-3">Ciprofloxacin Sandoz 750mg</h5>
+              <p>Comprimé</p>
+            <h6 class="mb-3 justify-content-md-end">
+              <s>7000 FCFA</s><strong class="ms-2 text-danger">5000 FCFA</strong>
+            </h6>
+            <a href="#" class="btn btn-success">Commander</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- End section -->
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-dark"
+          style="background-color: #ECEFF1">
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4 text-white" style="background-color: rgba(0, 0, 0, 0.2)";>
+      <!-- Left -->
+      <div class="me-5">
+        <span>Suivez-nous sur nos réseaux sociaux:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">A propos</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; 
+                background-color: #7c4dff; height: 2px"/>
+            <p>
+              <span style="color:#000000; font-weight:bold;">Pharma6+</span> est une pharmacie en ligne où vous pouvez rechercher la disponibilité de vos médicaments mais aussi demander des conseils et/ou recommandations à nos pharmaciens.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Produits</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"/>
+            <p>
+              <a href="#!" class="text-dark">Santé</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Beauté</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Hygiène</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Soins de visage</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Liens Utiles</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-dark">P. Confidentialité</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">CGV</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">FAQ</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Pharmacies de Garde</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Fass Paillote, Dakar, SN</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@pharma6plus.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +221 78 XXX XX XX</p>
+            <p><i class="fas fa-fax mr-3"></i> +221 33 XX XX XX</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  --> ; 
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color:#7ed957";> © 2022 Copyright
+      <a class="text-dark" href="https://www.pharma6plus.com"><span style="color:#000000; font-weight:bold;">Pharma6+</span></a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>

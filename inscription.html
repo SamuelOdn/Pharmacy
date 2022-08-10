@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Page d'inscription</title>
+    <!-- Pharma6+ icon -->
+    <link rel="icon" href="img/pharma6Whiteb.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+  </head>
+  <body>
+
+    <style type="text/css">
+
+      body{
+        background-color: #eee;
+        overflow-y: hidden;
+      }
+
+      html,
+      body,
+      .intro {
+        height: 100%;
+      }
+      .gradient-custom-2 {
+
+        background: #7ed957;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+      }
+      @media (min-width: 550px) and (max-width: 750px) {
+        html,
+        body,
+        .intro {
+          height: 550px;
+        }
+      }
+
+      @media (min-width: 800px) and (max-width: 850px) {
+        html,
+        body,
+        .intro {
+          height: 550px;
+        }
+      }
+
+      a.link {
+        font-size: .875rem;
+        color: #7ed957;
+      }
+      a.link:hover, 
+      a.link:active {
+        color: #426193;
+      }
+    </style>
+    <!-- Start your project here-->
+  <section class="intro">
+    <div class="bg-image h-100">
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-lg-9 col-xl-8">
+              <div class="card" style="border-radius: 1rem;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-none d-md-block gradient-custom-2">
+                    <img
+                      src="img/pharma6V.png" alt="logo pharma6+"
+                      class="img-fluid" style="height: 50%; margin-top: 120px; "/>
+                  </div>
+                  <div class="col-md-8 d-flex align-items-center">
+                    <div class="card-body py-5 px-4 p-md-5">
+
+                      <form action="#" method="POST">
+                        <img class="mb-2 align-items-center" src="img/pharma6W1.png" style="width: 50px; height: 50px; margin-left: 150px;">
+                       
+                        <h4 class="mb-3 align-items-center" style="margin-left: 90px;">Inscrivez-vous !</h4>
+
+                        <div class="row mb-4">
+                          <div class="col">
+                            <div class="form-outline">
+                              <input type="text" id="form3Example1" class="form-control" name="nom" required/>
+                              <label class="form-label" for="form3Example1">Nom</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-outline">
+                              <input type="text" id="form3Example2" class="form-control" name="prenom" required/>
+                              <label class="form-label" for="form3Example2">Prénom</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+                          <div class="input-group form-outline">
+                            <span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" name="email" required />
+                            <label for="validationDefaultUsername" class="form-label">Adresse Email</label>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+                          <div class="input-group form-outline">
+                            <span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-phone"></i></span>
+                            <input type="number" id="form2Example2" class="form-control" name="phone" required />
+                            <label class="form-label" for="form2Example2">Téléphone</label>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+                          <div class="input-group form-outline">
+                            <span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-lock"></i></span>
+                            <input type="password" id="form2Example2" class="form-control" name="mdp" required />
+                            <label class="form-label" for="form2Example2">Mot de passe</label>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+                          <div class="input-group form-outline">
+                            <span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-lock"></i></span>
+                            <input type="password" id="form2Example2_1" class="form-control" required />
+                            <label class="form-label" for="form2Example2_1"> Confirmer mot de passe</label>
+                          </div>
+                        </div>
+
+                       <div class="form-check d-flex justify-content-center mb-3">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="yes" required/>
+                        <label class="form-check-label" for="form2Example3">
+                          J'accepte toutes les déclarations des <a href="#">conditions d'utilisation</a>
+                        </label>
+                      </div>
+
+                      <p class="alerte"> </p>
+
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                          <input type="submit" class="btn btn-success btn-block" value="S'inscrire" role="button" style="background-color: #7ed957;" id="soumettre">
+                        </div>
+                        <hr>
+                        <p class="text-center text-muted mt-2 mb-0">Avez-vous déjà un compte ? <a class="link float-end" href="connexion.html">Se connecter</a></p>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>
+
